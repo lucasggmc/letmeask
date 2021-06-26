@@ -32,12 +32,35 @@ Esse projeto foi desenvolvido com:
    
 <p>
    O projeto Letmeask foi desenvolvido na Next Level Week, Na trilha de Reacjs junto as aulas do Diego Fernandes.<br />
-   Foram feitas alterações por mim, foi adicionado uma modal genérica de confirmação e exclusão de salas e perguntas no menu administrativo <br />
+   Foram feitas alterações por mim, foi adicionado uma modal genérica de confirmação e exclusão de salas e perguntas no menu administrativo
    e foi adicionado ajustes na responsividade da aplicação, o layout pode ser visto abaixo no figma.
 </p>
 ---
 
 <h2 align="center">Layout</h2>   
-    <p align="center"> 
+    <p> 
    - <a href="https://www.figma.com/file/kLK7FYnWKMoN68sQXcSniu/PayFlow">Figma</a> 
    </p>
+
+## Execução do projeto
+
+Clone o projeto e acesse a pasta do mesmo.
+
+```bash
+$ git clone https://github.com/lucasggmc/letmeask
+$ cd letmeask
+```
+
+Para iniciar, siga os passos abaixo:
+```bash
+# Instalar todas as dependências do projeto
+$ yarn
+
+# Iniciar o projeto
+$ yarn start
+```
+Se tudo correr bem o app estará disponível no seu browser pelo endereço http://localhost:3000 ou por outra porta indicada pela própria aplicação.
+
+Será necessário criar uma conta no [Firebase](https://firebase.google.com/) e um projeto para disponibilizar um Realtime Database.
+
+Após isso você vai precisar adicionar suas credencias do firebase em um arquivo com suas variáveis de ambiente e tudo funcionará corretamente :D
