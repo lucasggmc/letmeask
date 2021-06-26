@@ -1,5 +1,5 @@
 import { FormEvent, useState } from 'react';
-import { useParams } from 'react-router-dom'
+import { useHistory, useParams } from 'react-router-dom'
 
 import logoImg from '../assets/images/logo.svg';
 
@@ -18,6 +18,7 @@ type RoomParams = {
 }
 
 export function Room() {
+  const history = useHistory(); 
   const { user } = useAuth();
   const params = useParams<RoomParams>();
   const [newQuestion, setNewQuestion] = useState('');
@@ -26,7 +27,7 @@ export function Room() {
   const { title, questions } = useRoom(roomId)
 
   async function handleSendQuestion(event: FormEvent) {
-    event.preventDefault();
+    event.preventDefault();         
 
     if (newQuestion.trim() === '') {
       return;
@@ -61,11 +62,15 @@ export function Room() {
     }
   }
 
+  function redirectToHome(){
+    history.push('');
+  }
+
   return (
     <div id="page-room">
       <header>
         <div className="content">
-          <img src={logoImg} alt="Letmeask" />
+          <img src={logoImg} alt="Letmeask" onClick={redirectToHome}/>
           <RoomCode code={roomId} />
         </div>
       </header>

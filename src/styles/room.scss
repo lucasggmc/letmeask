@@ -12,6 +12,7 @@
   
         > img {
           max-height: 45px;
+          cursor: pointer;
         }
 
         >div{
@@ -46,8 +47,9 @@
           border-radius: 9999px;
           padding: 8px 16px;
           color: #FFF;
-          font-weight: 500;
+          font-weight: 400;
           font-size: 14px;
+          font-family: 'Roboto', sans-serif;
         }
       }
   
@@ -84,6 +86,7 @@
               color: #29292e;
               font-weight: 500;
               font-size: 14px;
+              font-family: 'Roboto', sans-serif;
             }
           }
   
@@ -109,4 +112,72 @@
           margin-top: 32px;
       }
     }
+
   }
+
+  .container-modal{
+    margin-top: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    gap: 20px;
+
+    img{
+
+    }
+
+    h2{
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+    }
+
+    p{
+      font-family: 'Roboto', sans-serif;
+      color: #737380;
+    }
+
+    div{
+      margin-top: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      gap: 10px;
+
+      .button-cancel{                
+        background: #DBDCDD;
+        color: #737380;                        
+      }
+
+      .button-confirm-cancel{
+          background: #E73F5D;
+          color: #FEFEFE;  
+      }
+    }        
+
+  }
+
+.button {
+  font-family: 'Roboto', sans-serif;
+  height: 40px;
+  border-radius: 8px;
+  font-weight: 500;
+
+  padding: 0 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  border: 0;
+
+  transition: filter 0.2s;
+
+  &:hover{
+    filter: brightness(0.9);
+  }
+}
